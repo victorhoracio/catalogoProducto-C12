@@ -1,5 +1,6 @@
 import { Navbar, Container, Nav, Button } from "react-bootstrap";
 import logo from "../../assets/coffee_logo.png";
+import { NavLink } from "react-router";
 
 const Menu = () => {
   return (
@@ -16,11 +17,10 @@ const Menu = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="#home">Inicio</Nav.Link>
-            <Nav.Link href="#link">Administrador</Nav.Link>
-            <Button className="nav-link " variant="link" >
-              Login
-            </Button>
+            <NavLink className="nav-link" to={'/'}>Inicio</NavLink>
+            <NavLink className="nav-link" to={'/administrador'}>Administrador</NavLink>
+             <NavLink className="nav-link" to={'/holaMundo'}>Login</NavLink>
+            
           </Nav>
         </Navbar.Collapse>
       </Container>
